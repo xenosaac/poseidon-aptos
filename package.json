@@ -1,0 +1,28 @@
+{
+  "name": "poseidon-aptos",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "Move.toml",
+    "LICENSE",
+    "README.md",
+    "sources/",
+    "scripts/",
+    "generated/poseidon_constants.json",
+    "generated/poseidon_vectors.json"
+  ],
+  "scripts": {
+    "parity": "node scripts/circomlibjs_parity.mjs",
+    "json:sanity": "node scripts/generated_json_sanity.mjs",
+    "move:compile": "aptos move compile --dev",
+    "move:test": "aptos move test --dev",
+    "verify": "npm run parity && npm run json:sanity && npm run move:compile && npm run move:test"
+  },
+  "devDependencies": {
+    "circomlibjs": "0.1.7",
+    "ffjavascript": "0.2.62",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.5"
+  }
+}

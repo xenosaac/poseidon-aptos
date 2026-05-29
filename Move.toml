@@ -1,0 +1,17 @@
+[package]
+name = "poseidon_aptos"
+version = "0.1.0"
+authors = []
+
+[addresses]
+poseidon_aptos = "_"
+
+[dev-addresses]
+poseidon_aptos = "0xCAFE"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "e0f33de9783f2ceaa30e5f2b004d3b39812c4f06"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
